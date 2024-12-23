@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('phone')->nullable();
             $table->string('resume_path')->nullable();
             $table->json('additional_details')->nullable();
+            $table->text('parsed_resume')->nullable();
+            $table->integer('status')->default(0)->comment('1=>extracted resume , 0=> processing');
             $table->timestamps();
         });
     }

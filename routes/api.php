@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('upload-resume', [Controller::class, 'upload']);
+Route::get('get-all-details', [Controller::class, 'getData']);

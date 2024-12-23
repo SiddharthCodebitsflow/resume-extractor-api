@@ -21,6 +21,11 @@ class Controller extends BaseController
 
     public function upload(Request $request)
     {
-        $this->resumeRepository->uploadFile($request);
+        return $this->resumeRepository->uploadFile($request);
+    }
+
+    public function getData(Request $request)
+    {
+        return $this->resumeRepository->getResumeData($request);
     }
 }

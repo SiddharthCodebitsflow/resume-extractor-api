@@ -16,7 +16,8 @@ class User extends Authenticatable
         'email',
         'phone',
         'resume_path',
-        'additional_details'
+        'additional_details',
+        'parsed_resume'
     ];
 
     protected $casts = [
