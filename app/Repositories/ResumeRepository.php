@@ -31,8 +31,7 @@ class ResumeRepository implements ResumeRepositoryInterface
             $fileName = time() . '_' . $file->getClientOriginalName();
             $filePath = $file->storeAs($directory, $fileName, 'public');
 
-            $parserText = $this->parseResume($file->getRealPath(), $extension);
-            // dd($parserText);
+            $parserText = $this->parseResume($file->getRealPath(), $extension);  //pdfparser
             $arr = [];
             if ($parserText) {
                 $data = json_decode($this->convertToJson($parserText));
