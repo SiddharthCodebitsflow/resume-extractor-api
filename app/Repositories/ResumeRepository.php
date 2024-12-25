@@ -32,6 +32,7 @@ class ResumeRepository implements ResumeRepositoryInterface
             $filePath = $file->storeAs($directory, $fileName, 'public');
 
             $parserText = $this->parseResume($file->getRealPath(), $extension);
+            // dd($parserText);
             $arr = [];
             if ($parserText) {
                 $data = json_decode($this->convertToJson($parserText));
